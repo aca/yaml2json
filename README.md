@@ -11,11 +11,12 @@ cat pod.json | j2y
 kubectl get pods -A -o json | j2y | y2j | jq .
 ```
 
-Install
----
+#### Install
+Using go mod, requires go>=1.13
 ```
-go get -u github.com/aca/yaml2json/y2j
-go get -u github.com/aca/yaml2json/j2y
+git clone git@github.com:aca/yaml2json.git && cd yaml2json 
+go install ./j2y
+go install ./y2j
 ```
 
 
